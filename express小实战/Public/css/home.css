@@ -1,0 +1,8 @@
+.box>.box-content{
+  display: flex;
+  flex-direction: column;
+}
+.box>.box-content>.section{
+  flex: 1;
+  overflow: auto;
+}

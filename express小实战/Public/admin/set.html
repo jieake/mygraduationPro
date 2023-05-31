@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/public.css">
+  <link rel="stylesheet" href="../css/set.css">
+  <title>设置</title>
+  <script src="../js/axios.min.js"></script>
+  <script src="../js/verifys.js"></script>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+      <a href="home.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi pe-none me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4">天河管理系统</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="home.html" class="nav-link text-white" aria-current="page">
+            <svg class="bi pe-none me-2" width="16" height="16">
+              <use xlink:href="#home"></use>
+            </svg>
+            主页
+          </a>
+        </li>
+        <li>
+          <a href="student.html" class="nav-link text-white">
+            <svg class="bi pe-none me-2" width="16" height="16">
+              <use xlink:href="#speedometer2"></use>
+            </svg>
+            学生管理
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <svg class="bi pe-none me-2" width="16" height="16">
+              <use xlink:href="#table"></use>
+            </svg>
+            成绩管理
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <svg class="bi pe-none me-2" width="16" height="16">
+              <use xlink:href="#grid"></use>
+            </svg>
+            就业管理
+          </a>
+        </li>
+        <li>
+          <a href="admins.html" class="nav-link text-white">
+            <svg class="bi pe-none me-2" width="16" height="16">
+              <use xlink:href="#people-circle"></use>
+            </svg>
+            管理员表
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <!-- 下拉显示隐藏区 -->
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" id="avatarBt" width="32" height="32" class="rounded-circle me-2">
+          <strong id="strongName">mdo</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li><a class="dropdown-item" href="#">更多...</a></li>
+          <li><a class="dropdown-item" href="set.html">设置</a></li>
+          <li><a class="dropdown-item" href="#">配置文件</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item exits" href="#">退出</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box-content">
+      <div class="header">
+        <div class="timer"></div>
+        <div class="user">欢迎你，<span id="uName"></span><img src="#" id="avatarTp"></div>
+      </div>
+
+      <div class="section">
+
+        <!-- 个人信息区 -->
+        <div class="setContent">
+          <div class="msgset">个人信息设置</div>
+          <!-- 分页式导航标签 -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="avatar-tab" data-bs-toggle="tab" href="#avatar" role="tab"
+                aria-controls="home" aria-selected="true">修改头像</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#password" role="tab"
+                aria-controls="profile" aria-selected="false">修改密码</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+                aria-controls="contact" aria-selected="false">Contact</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <!-- 头像修改 -->
+            <div class="tab-pane fade show active" id="avatar" role="tabpanel" aria-labelledby="avatar-tab">
+              <div class="mb-3">
+                <label for="formFileAvatar" class="form-label">选择头像</label>
+                <input class="form-control" type="file" id="formFileAvatar">
+                <input type="button" value="提交" class="btn btn-success" style="width: 100px;">
+                <div id="showimg" style="background-color: pink;width: 300px;height: 200px;margin:30px 0 0 30px;"></div>
+              </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="profile-tab">
+              <div>
+                <input class="form-control" type="text" placeholder="旧密码" aria-label="default input example" required>
+                <input class="form-control" type="password" placeholder="新密码" aria-label="default input example">
+                <input class="form-control" type="password" placeholder="确认新密码" aria-label="default input example">
+                <button id="editPassw" type="button" class="btn btn-warning">确定修改</button>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/public.js"></script>
+  <script src="../js/set.js"></script>
+
+</body>
+
+</html>

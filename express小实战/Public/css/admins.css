@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box>.box-content{
+  display: flex;
+  flex-direction: column;
+}
+.box>.box-content>.section{
+  flex: 1;
+
+  overflow: auto;
+  padding: 20px;
+}
+.box>.box-content>.section>.stuTable{
+  margin: 30px;
+}
+.box>.box-content>.section>.stuTable>table{
+  caption-side: top;
+}
+.box>.box-content>.section>.stuTable>table>caption{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px gray;
+}
+.box>.box-content>.section>.stuTable>table>tbody>tr:hover{
+  background-color: #ee8282;
+}
+.box>.box-content>.section>.stuTable>.editPage>.form-select{
+     display: inline-block;
+     width: auto;
+}
+.box>.box-content>.section>.stuTable>.editPage{
+  margin-top: 50px;
+}
+.box>.box-content>.section>.stuTable>.btnSer{
+  display: flex;
+  align-items: center;
+}
+.box>.box-content>.section>.stuTable>table>tbody>tr>td>img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

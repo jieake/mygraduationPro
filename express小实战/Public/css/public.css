@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,body{
+  height: 100%;
+}
+.box{
+  display: flex;
+
+  height: 100%;
+}
+.box>div{
+  height: 100%;
+}
+.box>div.box-content{
+  flex: 1;
+}
+
+.box>div.box-content .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 130px 0 30px;
+  height: 70px;
+  background-color: #212529;
+
+  font-size: 25px;
+  color: whitesmoke;
+}
+.box>div.box-content .header>.user{
+  display: flex;
+  align-items: center;
+}
+.box>div.box-content .header>.user>img{
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+
